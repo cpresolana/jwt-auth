@@ -1,0 +1,31 @@
+// requires REST Client to send HTTP request and view the response in Visual Studio Code directly 
+
+// GET http://localhost:3000/posts HTTP/1.1
+GET http://localhost:3000/posts 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2hyaXN0aWFuIiwiaWF0IjoxNzE1MTc1MDE0LCJleHAiOjE3MTUxNzUwMzR9.kNuxQsFr8Cb2kNF9jVvL29h3QnPBRg-hlaxFMXbquqo
+###
+
+POST http://localhost:4000/token 
+Content-type:application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2hyaXN0aWFuIiwiaWF0IjoxNzE1MTc0OTkzfQ.QfRvtlVBPXbJnkHses0krRP_Gomb5xXGo2LSURvaX-M"
+}
+
+###
+
+POST http://localhost:4000/login 
+Content-type:application/json
+
+{
+    "username": "Christian"
+}
+
+### 
+
+DELETE http://localhost:4000/logout
+Content-type:application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2hyaXN0aWFuIiwiaWF0IjoxNzE1MTc0OTkzfQ.QfRvtlVBPXbJnkHses0krRP_Gomb5xXGo2LSURvaX-M"
+}
